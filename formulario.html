@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <div class="formulario">
+            <form  onsubmit="return validarCorreo()">
+                <label for="">Nombre</label>
+                <input type="text" name="" id="" placeholder="Nombre(s)" onkeypress="return onlyLetters(event)"
+                    required>
+                <br>
+
+                <label for="">Apellido</label>
+                <input type="text" name="" id="" placeholder="Appelido(s)" onkeypress="return onlyLetters(event)"
+                    required>
+                <br>
+
+                <label for="">Telefono</label>
+                <input type="text" name="" id="" placeholder="telefono" onkeypress="return onlyNumbers(event)" required>
+                <br>
+
+                <label for="">Correo</label>
+                <input type="text" name="" id="" placeholder="Correo" placeholder="ejemplo@dominio.com" required>
+                <br>
+
+                <label for="genero">Genero</label>
+                <select id="genero" name="genero" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">otro</option>
+                </select><br>
+
+                <label for="bio">Biografia</label>
+                <textarea id="bio" name="bio" rows="6" cols="30" minlength="1" maxlength="500" required></textarea><br>
+
+                <button type="submit">Guardar datos
+                </button>
+
+            </form>
+
+
+
+        </div>
+    </main>
+
+    <script src="./validation.js"></script>
+</body>
+
+</html>
