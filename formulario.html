@@ -4,53 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/CSS" href="../assets/styles/registro.css">
 </head>
 
 <body>
-    <main>
-        <div class="formulario">
-            <form  onsubmit="return validarCorreo()">
-                <label for="">Nombre</label>
-                <input type="text" name="" id="" placeholder="Nombre(s)" onkeypress="return onlyLetters(event)"
-                    required>
-                <br>
+    <main class="contenedor">
+        <div class="contenedor_card">
+            <section class="formulario">
+                <h1>Registro</h1>
 
-                <label for="">Apellido</label>
-                <input type="text" name="" id="" placeholder="Appelido(s)" onkeypress="return onlyLetters(event)"
-                    required>
-                <br>
+                <form onsubmit="return validarCorreo()">
+                    <label for="">Nombre</label>
+                    <input type="text" name="" id="" placeholder="Nombre(s)" onkeypress="return onlyLetters(event)"
+                        required>
 
-                <label for="">Telefono</label>
-                <input type="text" name="" id="" placeholder="telefono" onkeypress="return onlyNumbers(event)" required>
-                <br>
+                    <label for="">Apellido</label>
+                    <input type="text" name="" id="" placeholder="Appelido(s)" onkeypress="return onlyLetters(event)"
+                        required>
 
-                <label for="">Correo</label>
-                <input type="text" name="" id="" placeholder="Correo" placeholder="ejemplo@dominio.com" required>
-                <br>
+                    <label for="">Telefono</label>
+                    <input type="text" name="" id="" placeholder="telefono" onkeypress="return onlyNumbers(event)"
+                        required>
 
-                <label for="genero">Genero</label>
-                <select id="genero" name="genero" required>
-                    <option value="">-- Selecciona una opción --</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="otro">otro</option>
-                </select><br>
+                    <label for="">Correo</label>
+                    <input type="text" name="" id="correo" placeholder="Correo" placeholder="ejemplo@dominio.com"
+                        onkeypress="return noSpace(event)" required>
 
-                <label for="bio">Biografia</label>
-                <textarea id="bio" name="bio" rows="6" cols="30" minlength="1" maxlength="500" required></textarea><br>
+                    <label for="genero">Genero</label>
+                    <select id="genero" name="genero" required>
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">otro</option>
+                    </select>
 
-                <button type="submit">Guardar datos
-                </button>
+                    <label for="bio">Biografia</label>
+                    <textarea id="bio" name="bio" rows="6" cols="30" minlength="1" maxlength="500"
+                        required></textarea>
 
-            </form>
+                    <div class="boton">
+                        <button type="submit" class="btn btn--primary">Guardar datos
+                        </button>
+                    </div>
+
+                </form>
+
+            </section>
+            <aside class="auth__aside">
+                <div class="aside__content">
+                    <h2>¿Ya tienes cuenta?</h2>
+                    <p>Inicia sesión para continuar.</p>
+                    <a href="#" class="btn btn--ghost">Iniciar sesión</a>
+                </div>
+            </aside>
 
 
 
         </div>
     </main>
 
-    <script src="./validation.js"></script>
+    <script src="../assets/scripts/validation.js"></script>
 </body>
 
 </html>

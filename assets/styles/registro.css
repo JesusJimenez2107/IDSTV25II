@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: #1a1a1a;
+  background: #d8ecff; 
+}
+
+.contenedor {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px;
+}
+
+.contenedor_card {
+  width: min(1050px, 95vw);
+  min-height: 520px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  overflow: hidden;
+}
+
+.formulario {
+  padding: 48px 56px;
+  background: #ffffff;
+}
+
+.formulario h1 {
+  margin: 0 0 24px;
+  font-size: 32px;
+  color: #003366;
+}
+
+form {
+  display: grid;
+  gap: 14px;
+}
+
+label {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 2px solid #c6d4e1;
+  border-radius: 10px;
+  outline: none;
+  background: #f9fbff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4d9aff;
+  box-shadow: 0 0 0 3px rgba(77, 154, 255, 0.2);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.1s ease, background 0.2s, box-shadow 0.2s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn--primary {
+  background: #1e5fb3;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(30, 95, 179, 0.3);
+}
+
+.btn--primary:hover {
+  background: #2573d1;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn--ghost:hover {
+  background: #ffffff22;
+}
+
+.auth__aside {
+  background: linear-gradient(135deg, #2573d1, #1e5fb3);
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.aside__content {
+  color: #ffffff;
+  max-width: 360px;
+  text-align: left;
+}
+
+.aside__content h2 {
+  font-size: 32px;
+  line-height: 1.15;
+  margin: 0 0 10px;
+}
+
+.aside__content p {
+  margin: 0 0 24px;
+  color: #e3f2fd;
+}
+
+input.error,
+textarea.error,
+select.error {
+  border-color: red !important;
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+}
