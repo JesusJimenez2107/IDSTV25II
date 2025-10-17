@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contenedor">
+        
+        <form onsubmit="return getTask()">
+            <label for="task_name">Tarea</label>
+            <input 
+                type="text" 
+                id="task_name" 
+                placeholder="Escríbe aquí" 
+                onpaste="return false" 
+                required
+            >
+            <button type="submit">Agregar tarea</button>
+        </form>
+
+        
+        <div class="todo_list" id="todo_list">
+            <ol id="task_list">
+              
+            </ol>
+        </div>
+
+    </div>
+
+    <script src="../assets/scripts/todo.js"></script>
+</body>
+</html>
