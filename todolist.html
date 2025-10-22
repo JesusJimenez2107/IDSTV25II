@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <link rel="stylesheet" type="text/CSS" href="../assets/styles/todo.css">
 </head>
+
 <body>
     <div class="contenedor">
-         <h1>To-Do List</h1>
+        <h1>To-Do List</h1>
         <form class="input-container" onsubmit="return getTask()">
-            <input 
-                type="text" 
-                id="task_name" 
-                placeholder="Escríbe aquí" 
-                onpaste="return false" 
-                required
-            >
+            <input type="text" id="task_name" placeholder="Escríbe aquí" onpaste="return false" required>
             <button type="submit">Agregar tarea</button>
         </form>
 
-        
+
         <div class="todo_list" id="todo_list">
             <ol id="task_list">
-              
+
             </ol>
+        </div>
+
+        <div class="card" id="edit_card" hidden>
+            <form onsubmit="return saveEdit()">
+                <h2>Editar tarea</h2>
+                <label for="edit_task_name">Tarea</label>
+                <input type="text" id="edit_task_name" placeholder="Editar texto..." required />
+                <div class="actions">
+                    <button type="submit">Guardar cambios</button>
+                    <button type="button" onclick="cancelEdit()">Cancelar</button>
+                </div>
+            </form>
         </div>
 
     </div>
 
     <script src="../assets/scripts/todo.js"></script>
 </body>
+
 </html>
