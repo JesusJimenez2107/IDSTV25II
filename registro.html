@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/CSS" href="assets/styles/login.css">
+</head>
+
+<body>
+    <div>
+
+        <div class="main_container">
+
+            <h1>Registro</h1>
+
+            <form action="app/AuthController.php" method="post">
+                <div class="input_field">
+                    <input class="input" type="text" name="nombre" placeholder="Nombre completo">
+                    <span class="icon">
+
+                    </span>
+                </div>
+
+                <div class="input_field">
+                    <input class="input" type="text" name="email" placeholder="Correo">
+                    <span class="icon">
+
+                    </span>
+                </div>
+
+                <div class="input_field">
+                    <input class="input" type="password" name="password" placeholder="Contraseña">
+                    <span class="icon">
+
+                    </span>
+                </div>
+
+                <button class="btn" type="submit">Registrarse</button>
+                <p class="sub">¿Yo tienes cuenta? <a href="index.html">Inicia sesión</a></p>
+
+                <input type="hidden" name="action" value="registro">
+
+            </form>
+
+        </div>
+
+
+    </div>
+</body>
+
+</html>
