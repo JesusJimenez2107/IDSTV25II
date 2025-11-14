@@ -118,7 +118,7 @@ class AuthController {
 
         // Validar contraseña hasheada
         if ($user && password_verify($password, $user['password'])) {
-            header('Location: ../home.html');
+            header('Location: ../users.php');
             exit;
         } else {
             header('Location: ../index.html?error=credenciales');
